@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "533083736137",
+    "firebase_url": "https://game-charades-902e9.firebaseio.com",
+    "project_id": "game-charades-902e9",
+    "storage_bucket": "game-charades-902e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533083736137:android:608f5c115e0c11bd3a9798",
+        "android_client_info": {
+          "package_name": "com.jammus.gamecharades"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533083736137-7ugjrvdsmd0eoim4qp1tcuq4ood22red.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jammus.gamecharades",
+            "certificate_hash": "8365a89be0c8a52f822e5c71e25fdcf88ab5419d"
+          }
+        },
+        {
+          "client_id": "533083736137-fn7a37ogd21la8bev8n5ae0n1jr6evn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXdy2QhOP3lhW50GWMuQvs0fO68wzJ7w4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533083736137-fn7a37ogd21la8bev8n5ae0n1jr6evn2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
