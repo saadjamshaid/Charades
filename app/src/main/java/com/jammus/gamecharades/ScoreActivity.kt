@@ -17,7 +17,7 @@ class ScoreActivity : AppCompatActivity() {
         val playagainButton: Button = findViewById(R.id.playagainButton)
         val score = intent.getStringExtra("endscore")
 
-        finalscoreTextView.setText("Score: ${"$score"}")
+        finalscoreTextView.setText("${"$score"}")
 
         playagainButton.setOnClickListener { onPlayAgain() }
 

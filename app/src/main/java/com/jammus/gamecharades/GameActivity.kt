@@ -36,7 +36,7 @@ class GameActivity : AppCompatActivity() {
 
     }
 
-   /* private fun resetList() {
+    /* private fun resetList() {
 
         wordList = mutableListOf(
             "queen",
@@ -72,7 +72,7 @@ class GameActivity : AppCompatActivity() {
             onGameFinish()
         } else {
             word = firebaseWordList.removeAt(0)
-            wordTextView.setText("''${word}''")
+            wordTextView.setText("${word}")
         }
 
     }
