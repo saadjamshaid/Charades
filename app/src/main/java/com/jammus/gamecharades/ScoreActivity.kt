@@ -23,7 +23,7 @@ class ScoreActivity : AppCompatActivity() {
 
     }
 
-    fun onPlayAgain(){
+    private fun onPlayAgain(){
         val intent = Intent (this, GameActivity::class.java)
         startActivity(intent)
 
