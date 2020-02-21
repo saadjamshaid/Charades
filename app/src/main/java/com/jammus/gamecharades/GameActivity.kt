@@ -28,7 +28,6 @@ class GameActivity : AppCompatActivity() {
 
         dataRetrieval()
         setTimer()
-        //resetList()
 
         gotitButton.setOnClickListener { onCorrect() }
         skipButton.setOnClickListener { onSkip() }
@@ -36,9 +35,9 @@ class GameActivity : AppCompatActivity() {
 
     }
 
-    /* private fun resetList() {
+    private fun resetList() {
 
-        wordList = mutableListOf(
+        firebaseWordList = mutableListOf(
             "queen",
             "hospital",
             "basketball",
@@ -61,8 +60,8 @@ class GameActivity : AppCompatActivity() {
             "roll",
             "bubble"
         )
-        wordList.shuffle()
-    }*/      //Commented due to addition of Fire-base - Further plan to use with addition of internet permissions - in case of permissions denied
+        firebaseWordList.shuffle()
+    }  //used in case of internet unavailability or fire-base response fail
 
     private fun nextWord() {
 
@@ -79,9 +78,9 @@ class GameActivity : AppCompatActivity() {
 
     private fun onSkip() {
         val scoreTextView: TextView = findViewById(R.id.scoreTextView)
-
+        score = score.minus(1)
         if (!firebaseWordList.isEmpty()) {
-            score = score.minus(1)
+
             scoreTextView.setText("Score: ${score}")
         }
         nextWord()
@@ -89,9 +88,9 @@ class GameActivity : AppCompatActivity() {
 
     private fun onCorrect() {
         val scoreTextView: TextView = findViewById(R.id.scoreTextView)
+        score = score.plus(1)
 
         if (!firebaseWordList.isEmpty()) {
-            score = score.plus(1)
             scoreTextView.setText("Score: ${score}")
 
         }
@@ -140,6 +139,7 @@ class GameActivity : AppCompatActivity() {
 
             override fun onCancelled(error: DatabaseError) { // Failed to read value
                 Log.w("Saad", "Failed to read value.", error.toException())
+                resetList()
             }
         })
 
